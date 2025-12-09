@@ -41,7 +41,7 @@ export function DashboardProvider({ children }) {
   // Polling: refresh dashboard periodically to avoid stale charts
   useEffect(() => {
     if (!token) return;
-    const POLL_MS = 30000; // 3m polling interval
+    const POLL_MS = 300000; // 5m polling interval
     const id = setInterval(() => {
       fetchDashboard(lastFilters);
     }, POLL_MS);

@@ -1,5 +1,5 @@
-const BASE_URL = 'https://backend-production-8bac.up.railway.app';
-const ML_URL = 'https://machine-learning-production-a7ab.up.railway.app';
+const BASE_URL = import.meta.env.VITE_BASE_URL || 'https://backend-production-8bac.up.railway.app';
+const ML_URL = import.meta.env.VITE_ML_URL || 'https://machine-learning-production-a7ab.up.railway.app';
 
 async function fetchWithToken(url, token, options = {}) {
   return fetch(url, {
